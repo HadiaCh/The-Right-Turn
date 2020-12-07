@@ -1,0 +1,7 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_frederick_poisoned_event_image"
+		texturefile = "gfx/event_pictures/frederick_poisoned.dds"
+	}
+}

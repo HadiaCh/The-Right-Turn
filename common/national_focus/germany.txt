@@ -1,0 +1,50 @@
+﻿focus_tree = {
+	id = german_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = GER_test
+		text = "thisforwarnerhehe"
+		icon = GFX_goal_generic_construction
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus = }
+		x = 15
+		y = 5
+		relative_position_id = OTT_Head_West
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+		                                                              }
+	}
+   }

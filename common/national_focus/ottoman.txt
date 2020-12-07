@@ -1,0 +1,443 @@
+﻿focus_tree = {
+	id = ottoman_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = OTT
+		}
+	}
+	
+	default = no
+
+    continuous_focus_position = { x = -100 y = 1000 }
+	
+	focus = {
+		id = OTT_Recover_from_the_Civil_War
+		text = "Recover from the Civil War"
+		icon = GFX_goal_generic_construction
+		#prerequisite = { focus = }
+		#mutually_exclusive = { focus = }
+		x = 15
+		y = 5
+		#relative_position_id = 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+
+		}
+	}
+
+    focus = {
+		id = OTT_Reintegrate_East_Turkey
+		text = "Reintegrate the East"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Recover_from_the_Civil_War }
+		#mutually_exclusive = { focus = }
+		x = 1
+		y = 2
+		relative_position_id = OTT_Recover_from_the_Civil_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+                              add_state_core = 356
+							  add_state_core = 348
+							  add_state_core = 344
+							  add_state_core = 355
+							  add_state_core = 349
+							  add_state_core = 354
+		}
+	}
+
+	focus = {
+		id = OTT_The_Capital_Question
+		text = "The Capital Question"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Recover_from_the_Civil_War }
+		#mutually_exclusive = { focus = }
+		x = -1
+		y = 2
+		relative_position_id = OTT_Recover_from_the_Civil_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+			                 state_event = {
+								 id = ottoman.1
+							 }
+		}
+	}
+
+	focus = {
+		id = OTT_Go_After_Kurdistan
+		text = "Go after Kurdistan"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Recover_from_the_Civil_War }
+		#mutually_exclusive = { focus = }
+		x = 3
+		y = 2
+		relative_position_id = OTT_Recover_from_the_Civil_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+			                  create_wargoal = {
+								                 type = puppet_wargoal_focus
+					                            target = KUR 
+							  }
+						 }
+		}
+
+		focus = {
+		id = OTT_Kurds_Are_Turkish
+		text = "Kurds are Turkish"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Go_After_Kurdistan }
+		#mutually_exclusive = { focus = }
+		x = 0
+		y = 1
+		relative_position_id = OTT_Go_After_Kurdistan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+                                  add_state_core = 353
+								  add_state_core = 350
+								  add_state_core = 352
+							  }
+						 }
+    focus = {
+		id = OTT_Demand_Mosul
+		text = "Demand Mosul"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Recover_from_the_Civil_War }
+		#mutually_exclusive = { focus = }
+		x = -3
+		y = 2
+		relative_position_id = OTT_Recover_from_the_Civil_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { ARA = { state_event = {
+								 id = arab.1
+		       }
+			 }
+		  }
+		}
+
+		focus = {
+		id = OTT_Demand_Tibriz
+		text = "Demand Tibriz"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Demand_Mosul }
+		#mutually_exclusive = { focus = }
+		x = 1
+		y = 1
+		relative_position_id = OTT_Demand_Mosul
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { PER = { state_event = {
+								 id = persian.1
+		       }
+			 }
+		  }
+		}
+
+		focus = {
+		id = OTT_Demand_Deir_Az_Zur_And_Allepo
+		text = "Demand Deir-az-Zur and Allepo"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Demand_Mosul }
+		#mutually_exclusive = { focus = }
+		x = -1
+		y = 1
+		relative_position_id = OTT_Demand_Mosul
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { ARA = { state_event = {
+								 id = arab.2
+		       }
+			 }
+		  }
+		}
+		focus = {
+		id = OTT_Head_West
+		text = "Head West"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Recover_from_the_Civil_War }
+		#mutually_exclusive = { focus = }
+		x = -7
+		y = 2
+		relative_position_id = OTT_Recover_from_the_Civil_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { 
+		       }
+			 }
+		  
+
+		focus = {
+		id = OTT_Conquer_Bulgaria
+		text = "Conquer Bulgaria"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Head_West }
+		#mutually_exclusive = { focus = }
+		x = -1
+		y = 1
+		relative_position_id = OTT_Head_West
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { create_wargoal = {
+								                 type = puppet_wargoal_focus
+					                            target = BUL
+							  }
+		       }
+			 }
+
+		focus = {
+		id = OTT_Conquer_Greece
+		text = "A Trip to Athens!"
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OTT_Head_West }
+		#mutually_exclusive = { focus = }
+		x = 1
+		y = 1
+		relative_position_id = OTT_Head_West
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+	    complete_tooltip = {
+
+		}
+
+		completion_reward = { create_wargoal = {
+								                 type = puppet_wargoal_focus
+					                            target = GRE
+							  }
+		       }
+			 }
+		  }

@@ -1,0 +1,53 @@
+add_namespace = persian
+country_event = {
+	id = persian.1
+	title = "The Question of Tibriz"
+	desc = china.1.d
+	picture = GFX_frederick_poisoned_event_image
+	
+	is_triggered_only = yes
+	
+	option = { # Give Tibriz to the Ottomen
+		name = "Grant them what they demand, we can't risk war!"
+		ai_chance = { factor = 90 }
+		OTT = { set_state_owner = 419
+		        set_state_controller = 419 }
+		}
+
+	option = { # Tibriz is Persian!
+		name = "Tibriz is Persian and noone should think otherwise!"
+		ai_chance = { factor = 10 }
+		OTT = { add_state_claim = 419
+		       add_threat = 15
+			create_wargoal = { type = puppet_wargoal_focus target = PER }
+	}		
+   }
+  }
+
+  country_event = {
+	id = persian.2
+	title = "The Persian Election!"
+	desc = "WORK IN PROGRESS"
+	picture = GFX_frederick_poisoned_event_image
+	
+	is_triggered_only = yes
+	
+	option = { # Mohammad Mosaddegh
+		name = "Mohammad Mosaddegh shall lead our nation!"
+		ai_chance = { factor = 50 }
+		retire_ideology_leader = democratic
+		set_politics = { ruling_party = democratic }
+		}
+
+	option = { # Nassrollah Entezam-Saltaneh
+		name = "Nassrollah Entezam-Saltaneh has won fair and square!"
+		ai_chance = { factor = 25 }
+		set_politics = { ruling_party = democratic }
+	}
+	option = { # Hassan Taqizadeh
+		name = "Hassan Taqizadeh and our Shah have won the popular vote!"
+		ai_chance = { factor = 25 }
+		set_politics = { ruling_party = neutrality }
+	}		
+   }
+  

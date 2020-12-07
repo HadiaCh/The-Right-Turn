@@ -1,0 +1,53 @@
+add_namespace = arab
+country_event = {
+	id = arab.1
+	title = "The Question of Mosul"
+	desc = china.1.d
+	picture = GFX_frederick_poisoned_event_image
+	
+	is_triggered_only = yes
+	
+	option = { # Give Mosul to the Ottomen
+		name = "Grant them their wishes, we can't risk war!"
+		ai_chance = { factor = 90 }
+		OTT = { set_state_owner = 676
+		        set_state_controller = 676 }
+		}
+
+	option = { # Mosul is Arabian
+		name = "Mosul is Arabian and shall forever stay Arabian!"
+		ai_chance = { factor = 10 }
+		OTT = { add_state_claim = 676
+		       add_threat = 15
+			create_wargoal = { type = puppet_wargoal_focus target = ARA }
+		}
+	}		
+}
+
+country_event = {
+	id = arab.2
+	title = "The Situation of Deir-az-Zur and Allepo"
+	desc = china.1.d
+	picture = GFX_frederick_poisoned_event_image
+	
+	is_triggered_only = yes
+	
+	option = { # Give both to the Ottomen
+		name = "Grant them what they wish for, we can't risk war!"
+		ai_chance = { factor = 80 }
+		OTT = { set_state_owner = 677
+		        set_state_controller = 677
+				set_state_owner = 680
+		        set_state_controller = 680 }
+		}
+
+	option = { # Mosul is Arabian
+		name = "We shall not give any Arabian soil away!"
+		ai_chance = { factor = 20 }
+		OTT = { add_state_claim = 677
+		        add_state_claim = 680
+		       add_threat = 15
+			create_wargoal = { type = puppet_wargoal_focus target = ARA }
+		}
+	}		
+}

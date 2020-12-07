@@ -1,0 +1,21 @@
+add_namespace = ottoman
+country_event = {
+	id = ottoman.1
+	title = "The Capital Question"
+	desc = china.1.d
+	picture = GFX_frederick_poisoned_event_image
+	
+	is_triggered_only = yes
+	
+	option = { # Istanbul
+		name = "The heart and history of the Ottoman Empire lies in Istanbul!"
+		ai_chance = { factor = 60 }
+		set_capital = 341
+		}
+
+	option = { # Ankara
+		name = "Ankara is in the middle of our beautiful nation so it shall be the capital!"
+		ai_chance = { factor = 40 }
+		set_capital = 49
+	}		
+}
